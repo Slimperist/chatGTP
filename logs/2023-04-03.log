@@ -1,0 +1,14 @@
+[2023-04-03 23:12:32] I: Ќапиши на python сортировку методом пузырька
+[2023-04-03 23:12:36] ChatGtp: 
+
+def bubble_sort(items):
+    '''—ортировка списка значений методом пузырька'''
+    for i in range(len(items)-1, 0, -1):
+        for j in range(i):
+            if items[j] > items[j+1]:
+                items[j], items[j+1] = items[j+1],items[j]  # Swap!
+ 
+    return items
+ 
+items = [2, 4, 5, 1, 3]
+print(bubble_sort(items))
