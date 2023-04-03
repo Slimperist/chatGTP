@@ -34,6 +34,8 @@ def write_log(msg):
 while True:
     user_input = input("\033[;32mI: \033[;0m")
     write_log(f'I: {user_input}')
+        if user_input == 'exit':
+            break
     response = get_response_chatgtp(user_input)
     print(f"\033[;32mChatGTP:\033[;36m\n{response ['choices'] [0] ['text']}\033[;0m")
     write_log(f'ChatGtp: {response.choices [0].text}')
