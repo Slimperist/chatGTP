@@ -1,0 +1,14 @@
+[2023-04-03 23:14:49] I: write a bubble sorting in python
+[2023-04-03 23:14:52] ChatGtp: 
+
+def bubbleSort(list):
+	for num in range(len(list)-1, 0, -1):
+		for i in range(num):
+			if list[i] > list[i+1]:
+				temp = list[i]
+				list[i] = list[i+1]
+				list[i+1] = temp
+
+list = [5,3,8,4,9,1,6,2,7]
+bubbleSort(list)
+print(list)
